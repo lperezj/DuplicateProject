@@ -7,9 +7,10 @@ namespace DuplicateProject
     class Program
     {
         public const string SEPATATOR = "/";
-        public const string BaseProject = "Cognizant";
+        public const string BaseProject = "Xamarin";
+        public const string NameSpaceByDefault = "Cognizant";
 
-        public const string _pathBaseProject = "/users/758792/Projects/Personal";
+        public const string _pathBaseProject = "/users/758792/Projects";
 
         static void Main(string[] args)
         {
@@ -45,15 +46,15 @@ namespace DuplicateProject
                 //Files
                 foreach (var file in files)
                 {
-                    FileHelper.ReplaceContent(file, Program.BaseProject, nameNewProject);
-                    FileHelper.RenameFile(file, Program.BaseProject, nameNewProject);
+                    FileHelper.ReplaceContent(file, NameSpaceByDefault, nameNewProject);
+                    FileHelper.RenameFile(file, NameSpaceByDefault, nameNewProject);
                 }
 
                 //Directories
                 foreach (var d in directories)
                 {
                     RenameFilesAndDirectories(d, nameNewProject);
-                    DirectoryHelper.RenameDirectory(d, Program.BaseProject, nameNewProject);
+                    DirectoryHelper.RenameDirectory(d, NameSpaceByDefault, nameNewProject);
                 }
             }
             catch (Exception e)
