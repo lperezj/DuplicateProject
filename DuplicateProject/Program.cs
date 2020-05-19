@@ -7,8 +7,8 @@ namespace DuplicateProject
     class Program
     {
         public const string SEPATATOR = "/";
-        public const string BaseProject = "Xamarin";
-        public const string NameSpaceByDefault = "Cognizant";
+        public const string BaseProject = "Bfs";
+        public const string NameSpaceByDefault = "Bfs";
 
         public const string _pathBaseProject = "/users/758792/Projects";
 
